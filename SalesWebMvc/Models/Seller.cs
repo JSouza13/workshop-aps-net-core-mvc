@@ -14,7 +14,8 @@ namespace SalesWebMvc.Models
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public virtual Department Department { get; set; }
-        public int DepartmentId { get; set; }
+        // int? identifica que a variável pode receber valor null.
+        public int? DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
