@@ -14,6 +14,7 @@ namespace SalesWebMvc.Models
 
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double Amount { get; set; }
+
         public SaleStatus StatusId { get; set; }
         public virtual Seller Seller { get; set; }
         public int SellerId { get; set; }
