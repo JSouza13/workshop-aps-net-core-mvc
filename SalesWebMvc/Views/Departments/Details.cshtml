@@ -6,19 +6,23 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Department</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<h4>Department</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="col-md-3">
+        <a class="btn btn-default" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        <input type="button" value="Return" class="btn" onclick="history.go(-1)" />
+    </div>
 </div>

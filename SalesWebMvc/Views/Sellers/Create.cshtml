@@ -39,7 +39,8 @@
                 <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id", "Name"))" class="form-control"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" /> 
+                <input type="button" value="Return" class="btn" onclick="history.go(-1)" />                          
             </div>
         </form>
     </div>
